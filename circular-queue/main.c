@@ -91,6 +91,12 @@ int main() {
                 }
 
                 break;
+            case 6:
+                printf("-----------------------------------------------\n");
+
+                printf("Queue size: %d\n", size(queue));
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
