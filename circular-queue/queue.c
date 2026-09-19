@@ -26,3 +26,12 @@ t_queue* create_queue(int max) {
 
     return queue;
 }
+
+void destroy(t_queue *queue) {
+    if (queue == NULL) {
+        return;
+    }
+
+    free(queue->items);
+    free(queue);
+}
