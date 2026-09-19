@@ -59,3 +59,18 @@ int in(t_queue *queue, int elem) {
 
     return 1;
 }
+
+int out(t_queue *queue, int *elem) {
+    if (is_empty(queue) || elem == NULL) {
+        return 0;
+    }
+
+    if (queue->size == 1) {
+        *elem = queue->items[queue->end--];
+    } else {
+        *elem = queue->items[queue->begin++];
+    }
+
+    queue->size--;
+    return 1;
+}
