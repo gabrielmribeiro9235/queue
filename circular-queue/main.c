@@ -16,6 +16,18 @@ void menu() {
 }
 
 int main() {
+    int queue_size;
+
+    printf("-----------------------------------------------\n");
+
+    printf("Enter the maximum initial queue size: ");
+    scanf("%d", &queue_size);
+
+    t_queue *queue = create_queue(queue_size);
+
+    if (queue == NULL) {
+        return 1;
+    }
 
     return 0;
 }
