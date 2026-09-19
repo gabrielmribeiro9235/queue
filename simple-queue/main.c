@@ -55,6 +55,20 @@ int main() {
 
                 break;
             }
+            case 3: {
+                printf("-----------------------------------------------\n");
+                int popped_value;
+
+                int out_status = out(queue, &popped_value);
+
+                if (out_status == 1) {
+                    printf("Popped value: %d\n", popped_value);
+                } else {
+                    printf("Failed to pop\n");
+                }
+
+                break;
+            }
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
