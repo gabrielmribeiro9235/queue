@@ -43,3 +43,7 @@ int is_empty(t_queue *queue) {
 int is_full(t_queue *queue) {
     return queue == NULL || queue->size == queue->max;
 }
+
+int size(t_queue *queue) {
+    return queue == NULL ? 0 : queue->size;
+}
