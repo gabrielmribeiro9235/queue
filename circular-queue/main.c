@@ -97,6 +97,11 @@ int main() {
                 printf("Queue size: %d\n", size(queue));
 
                 break;
+            case 7:
+                printf("-----------------------------------------------\n");
+                printf("Leaving the program\n");
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
@@ -105,6 +110,13 @@ int main() {
 
     } while (opt != 7);
 
+    printf("-----------------------------------------------\n");
+    printf("Freeing up memory\n");
+
+    destroy(queue);
+
+    printf("-----------------------------------------------\n");
+    printf("End of the program\n");
 
     return 0;
 }
