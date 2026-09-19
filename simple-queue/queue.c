@@ -34,3 +34,7 @@ void destroy(t_queue *queue) {
     free(queue->items);
     free(queue);
 }
+
+int is_empty(t_queue *queue) {
+    return queue == NULL || queue->size == 0;
+}
