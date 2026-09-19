@@ -70,6 +70,7 @@ int out(t_queue *queue, int *elem) {
         queue->items[i] = queue->items[i + 1];
     }
 
+    queue->end--;
     queue->size--;
 
     return 1;
