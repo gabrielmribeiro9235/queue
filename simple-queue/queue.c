@@ -74,3 +74,24 @@ int out(t_queue *queue, int *elem) {
 
     return 1;
 }
+
+void print_queue(t_queue *queue) {
+    if (is_empty(queue)) {
+        printf("The queue is empty\n");
+    }
+
+    if (queue->end == 0) {
+        printf("begin -> %d <- end\n", queue->items[0]);
+        return;
+    }
+
+    for (int i = 0; i < queue->size; i++) {
+        if (i == 0) {
+            printf("%d <- begin\n", queue->items[i]);
+        } else if (i == queue->end) {
+            printf("%d <- end\n", queue->items[i]);
+        } else {
+            printf("%d\n", queue->items[i]);
+        }
+    }
+}
