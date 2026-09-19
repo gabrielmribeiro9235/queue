@@ -46,3 +46,15 @@ int is_full(t_queue *queue) {
 int size(t_queue *queue) {
     return queue == NULL ? 0 : queue->size;
 }
+
+int in(t_queue *queue, int elem) {
+    if (is_full(queue)) {
+        return 0;
+    }
+
+    queue->end++;
+    queue->items[queue->end] = elem;
+    queue->size++;
+
+    return 1;
+}
