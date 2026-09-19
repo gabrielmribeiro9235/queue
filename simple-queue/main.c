@@ -37,6 +37,24 @@ int main() {
                 printf("-----------------------------------------------\n");
                 print_queue(queue);
                 break;
+            case 2: {
+                printf("-----------------------------------------------\n");
+
+                int elem;
+
+                printf("Enter the element you want to insert: ");
+                scanf("%d", &elem);
+
+                int in_status = in(queue, elem);
+
+                if (in_status == 1) {
+                    printf("\n%d inserted successfully\n", elem);
+                } else {
+                    printf("\nFailed to insert\n");
+                }
+
+                break;
+            }
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
