@@ -69,6 +69,16 @@ int main() {
 
                 break;
             }
+            case 4:
+                printf("-----------------------------------------------\n");
+
+                if (is_empty(queue)) {
+                    printf("The queue is empty\n");
+                } else {
+                    printf("The queue is not empty\n");
+                }
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
