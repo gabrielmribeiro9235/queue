@@ -80,6 +80,7 @@ int out(t_queue *queue, int *elem) {
 void print_queue(t_queue *queue) {
     if (is_empty(queue)) {
         printf("The queue is empty\n");
+        return;
     }
 
     if (queue->end == 0) {
