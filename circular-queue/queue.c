@@ -16,6 +16,7 @@ t_queue* create_queue(int max) {
     queue->items = malloc(sizeof(int) * max);
 
     if (queue->items == NULL) {
+        free(queue);
         return NULL;
     }
 
