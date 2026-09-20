@@ -66,15 +66,10 @@ int out(t_queue *queue, int *elem) {
         return 0;
     }
 
-    if (queue->size == 1) {
-        *elem = queue->items[queue->end];
-        queue->end = (queue->end - 1) % queue->max;
-    } else {
-        *elem = queue->items[queue->begin];
-        queue->begin = (queue->begin + 1) % queue->max;
-    }
-
+    *elem = queue->items[queue->begin];
+    queue->begin = (queue->begin + 1) % queue->max;
     queue->size--;
+
     return 1;
 }
 
